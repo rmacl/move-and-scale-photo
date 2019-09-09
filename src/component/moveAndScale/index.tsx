@@ -1,11 +1,8 @@
-
 import React , { useState } from 'react';
 import { View, Animated, PanResponder } from 'react-native';
-import { prop } from './index.type';
-import getDistance from '../../util/getDistance';
+import { prop } from './index_type';
+
 const zoomSensitivity = 100;
-
-
 
 export default function MoveAndScale(props : prop){
     let animatedPositionX = new Animated.Value(0);
@@ -103,4 +100,11 @@ export default function MoveAndScale(props : prop){
           {props.children}
         </View>
     </Animated.View>);
+}
+
+function getDistance(event) {
+  const widthDistance =  Math.abs(event.nativeEvent.changedTouches[1].pageX - event.nativeEvent.changedTouches[0].pageX);
+  const heightDistance = Math.abs(event.nativeEvent.changedTouches[1].pageY - event.nativeEvent.changedTouches[0].pageY);
+
+  return Math.sqrt((widthDistance ** 2) + (heightDistance ** 2));
 }
