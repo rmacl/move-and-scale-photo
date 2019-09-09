@@ -13,12 +13,12 @@ You can implement move(drag) and scale(zoom in &  out) to any of your component.
 
 1. download and add import src/component/moveAndScale directory to your project folder.
 2. import moveAndScale library 
-```
+```javascript
 import MoveAndScale from '../component/moveAndScale';
 ```
 
 3. call your MoveAndScale library with your Image child component.
-```
+```javascript
 export default function ExampleTest(){
  
         return (
