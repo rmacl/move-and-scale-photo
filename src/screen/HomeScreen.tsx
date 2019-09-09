@@ -1,10 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, ImagePickerIOS  } from 'react-native';
-//import { isWhiteSpaceLike } from 'typescript';
-//import  MoveScale  from './MoveScale';
-
-
-
 
 
 export default function HomeScreen(props) {
